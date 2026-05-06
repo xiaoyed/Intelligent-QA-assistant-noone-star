@@ -1,8 +1,10 @@
 import axios from 'axios'
 import type { AnswerResponse, DocumentInfo, EvalMetrics, HealthStatus } from '../types'
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || ''
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: `${API_BASE_URL}/api`,
   timeout: 120000,
 })
 
